@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        html,body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        }
+        .head{
+           width: 100%;
+           height: 950px;
+          
+
+        }
+        .head .head_in{
+            width: 1600px;
+            height: 950px;
+            background:url(images/bg_01.jpg) no-repeat;
+         
+            margin: 0 auto;
+        }
+        .head_in_in{
+            width: 1000px;
+            height: 600px;
+            border: 1 red solid;
+            
+            margin: 0 auto;
+            padding-top: 190px
+            
+
+        }
+        .head_in_in .p1{
+            font-size: 62px;
+            text-align: center;
+            line-height: 72px;
+            color: #fff;
+            font-family: "Montserrat";
+            font-weight:lighter
+            
+        }
+        .head_in_in .p2{
+            font-size: 20px;
+            font-family: "Montserrat";
+            color: rgba( 255, 255, 255, 0.702 );
+            line-height: 1.6;
+            text-align: center;
+            margin: 70px auto;
+            width: 766px;
+            height: 84px;
+            z-index: 256;
+            font-weight:lighter
+
+        }
+        .head_in_in .p3{
+            width: 970px;
+            height: 250px;
+            border: 1px solid #7e7c79;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            word-spacing: 0.2em;
+        }
+        .p3 :first-child{
+            font-size: 16px;
+            font-family: "Montserrat";
+            color: rgb( 255, 255, 255 );
+            text-transform: uppercase;
+            margin: 29px 0 8px 0;
+            line-height: 1.75;
+            text-align: center;
+            letter-spacing: 3px;
+           
+            
+           
+
+
+        }
+        .p3 :nth-child(2){
+           
+            font-size: 12px;
+            font-family: "Montserrat";
+            color: rgba( 255, 255, 255, 0.3);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 55PX;
+            
+         }
+         .p3 input {
+             
+        width: 290px;
+        height: 50px;
+        border-radius: 5px;
+        background: none;
+        border: 1px solid #80796d;
+        margin: 0 32px 52px 0;
+        padding-left: 20px;
+        }
+        input:focus {
+        color: #fff;
+        font-size: 16px;
+        }
+
+        .p3 button {
+        width: 125px;
+        height: 50px;
+        background-color: #fff;
+        color: #000;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        border: 1px solid #fff;
+        border-radius: 5px
+        }
+        .page2{
+            height: 700px;
+           width: 100%;
+            background-color: #fff;
+           
+        }
+        .tip {
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-align: center;
+            margin-top: 85px;
+            }
+
+            .title {
+            font-size: 40px;
+            text-align: center;
+            width: 680px;
+            line-height: 55px;
+            font-family: STXihei;
+            margin: 30PX auto;
+            }
+            .list{
+                
+                display: flex;
+               
+                flex-flow: row wrap;
+                justify-content:space-between;
+            }
+            .page2 > div.list {
+            justify-content: center;
+            }
+            .info {
+            width: 500px;
+            height: 105px;
+            margin: 60px 89px 70px 60px;
+            
+            }
+
+            .info img{
+            float: left;
+            margin-top: -7px;
+            }
+            div.info > h3 , div.info > p {
+            width:378px;
+            margin: 0;
+            margin-left: 80px;
+            font-size: 16px;
+            color: #bbbbbb;
+            }
+
+            div.info > h3 {
+            font-size: 20px;
+            color: #000;
+            margin-bottom: 20px;
+            }
+            .page3{
+                
+                width: 1600px;
+                height: 750px;
+                background:url(images/bg3.jpg) no-repeat;
+                margin: 0 auto
+            
+            }
+            .left{
+                width: 545PX;
+                height: 446px;
+               
+                margin-top: 187px;
+                float:left;
+                margin-left: 300px;
+                color: #fff;
+
+            }
+            .left h2 {
+            font-size: 42px;
+            font-weight: normal;
+            width: 390px;
+            margin-bottom: 42px;
+            }
+            .left p{
+                font-size: 18px;
+                color: #b4b6b3;
+                width: 390px;
+                line-height: 28px;
+            }
+            .left button {
+            width: 240px;
+            height: 60px;
+            background:rgba(255, 251, 240, 0);
+            color:#fff;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            border: 1px solid #fff;
+            border-radius: 1px;
+            margin-top: 50px;
+            
+            }
+            .left button:hover{
+                background-color: #fff;
+                color: #000
+            }
+            .page4{
+                height: 580px;
+                width: 1280px;
+                margin: 0 auto;
+            }
+            .page4 h2{
+                font-size: 42px;
+            font-weight: normal;
+            text-align: center;
+            margin-top: 95px;
+            }
+            
+            .main {
+            width: 257px;
+            height: 283px;
+            margin-top: 81px;
+            margin-bottom: 60px;
+            font-size: 16px;
+            color: #a0a0a0;
+            padding: 0 10px;
+            }
+
+            .main img {
+            margin-left: 58px;
+            margin-bottom: 34px;
+            }
+            .page5{
+                height: 1000px;
+                width:100%;
+
+            }
+            .article{
+                width: 960px;
+                margin-top: 128px;
+                margin-bottom: 105px;
+                margin: 0 auto;
+            }
+            .page5 .list{
+                margin: 100px auto;
+
+            }
+            .desc {
+            margin-top: 62px;
+            width: 315px;
+            font-size: 20px;
+            font-weight: normal;
+            }
+
+            .desc > p {
+            font-size: 16px;
+            color: #a0a0a0;
+            }
+            .page6{
+                height: 1000px;
+                width: 960px;
+                margin: 0 auto
+
+            }
+            .page6 h2{
+                font-size: 42px;
+                font-weight: normal;
+               text-align: center;
+                margin-bottom: 42px;
+            }
+            .page6 p{
+                font-size: 16px;
+                 color: #a0a0a0;
+            }
+            .person{
+                margin: 5px;
+            }
+            .page7{
+                
+               width: 960px;
+                margin: 0 auto;
+                
+            }
+            .left7{
+                width: 476px;
+                float: left;
+                border: 1px solid #d4d3d3;
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 50px;
+                
+
+            }
+            .left7 p {
+            margin-top: 50px;
+            letter-spacing: 0.1em;
+            color: #000;
+            }
+            .left7> input, .left7> button {
+                width: 345px;
+                height: 46px;
+                padding-left: 25px;
+                color: #d4d3d3;
+                border: 1px solid #d4d3d3;
+                border-radius: 5px;
+                margin: 0;
+                margin-top: 30px;
+            }
+            .left7> textarea {
+            width: 345px;
+            padding-left: 25px;
+            border: 1px solid #d4d3d3;
+            border-radius: 5px;
+            color: #d4d3d3;
+            margin-top: 30px;
+            }
+            .left7 button{
+                background: #000;
+                color: #fff;
+                width: 374px;
+                letter-spacing: 0.1em;
+                padding: 0;
+                margin-bottom: 66px;
+            }
+            .right7 {
+            width: 370px;
+            float: right;
+            margin-bottom: 50px;
+            }
+
+            .right7 > h3{
+            font-size: 42px;
+            font-weight: normal;
+            text-align: left;
+            margin-top: 85px;
+            }
+
+            .right7 p {
+            color: #a0a0a0;
+            margin-bottom: 69px;
+            }
+
+            #method {
+            list-style: none;
+            padding: 0;
+            }
+
+            #method li {
+            margin-bottom: 35px;
+            }
+            #method i {
+            float: left;
+            font-size: 28px;
+            }
+
+            #method p {
+            margin-left: 48px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            line-height: 18px;
+            color: #000;
+            }
+            footer {
+            
+            width: 100%;
+            height: 350px;
+            background-color: #000;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+            
+            }
+
+            .ft-list {
+            margin-top: 88px;
+            }
+            .link , .link a{
+            color: #525252;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 25px;
+            }
+
+            .list-1 {
+            margin-left: 214px;
+            }
+
+            .list-4 {
+            margin-right: 228px;
+            }
+
+           
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="head_in">
+            <div class="head_in_in">
+              <p class="p1">Hello World</p></br>
+              <p class="p2">China is speeding up strategic plan, standards, traffic rules, laws and regulations on accident-incurred liabilities for its smart car industry, Economic Information Daily reported Thursday.</p></br>
+              <div class="p3">
+                  <p>Create Your Account</p>
+                  <p>It is absolutely free</p>
+                  <input type="email" name="account" placeholder="denis@getcraftwork.com">
+			  	<input type="password" name="password" placeholder="Create your password">
+			  	<button type="button">SIGN UP</button>
+              </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="page2">
+        	<p class="tip">BOATLOADS OF AWESOME</p>
+  	            <p class="title">Ready-made, customizable, HTML landing page sections</p>
+
+            <div class="list">
+                   
+                     
+  		<div class="info">
+  			<img src="images\img_01.gif" alt="Mobile">
+  			<h3>Mobile First</h3>
+  			<p>All modulz are built moble-first for maximum device compatibility</p>
+  		</div>
+  		<div class="info">
+  			<img src="images\img_02.gif" alt="Access">
+  			<h3>Accessibility</h3>
+  			<p>Support for IE8,mobile and tablet devices.screenreaders and color blind</p>
+  		</div>
+  		<div class="info">
+  			<img src="images\img_03.gif" alt="Fluid">
+  			<h3>Fluid Typography</h3>
+  			<p>on different screen sizes,fonts automagically scale with viewport.</p>
+  		</div>
+  		<div class="info">
+  			<img src="images\img_04.gif" alt="Custom">
+  			<h3>Customization</h3>
+  			<p>Make any design your own using the Style Editor Personalize fonts,colors,and layouts to create the custom look you want.</p>
+  		</div>
+  		</div>
+    </div>
+    <div class="page3">
+        <div class="left">
+            <h2>Supportive policies for China's smart car</h2>
+            <p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance for the Intel<br>ligent and Connected Vehicles.</p>
+            <button type="button" style="margin-right: 30px">CHECK OUT FEATURES</button>
+            <button type="button">TRY PRODUCT FOR FREE</button>
+        </div>
+    </div>
+    <div class="page4">
+		<h2>Try our Awesome Products</h2>
+		<div class="list">
+			<div class="main">
+				<img src="images/img_08.png">
+				<p>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds.</p>
+			</div>
+			<div class="main">
+				<img src="images/img_09.png">
+				<p>Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan ($158.15 billion) and also able to boost fast development in 5G, internet of cars, big data, artificial intelligence and new-energy vehicles.</p>
+			</div>
+			<div class="main">
+				<img src="images/img_10.png">
+				<p>Zhang Junyi, a partner with NIO Capital, said that the smart car is the trend for the car industry and China's auto sector will usher in a new key development stage with the improvement of infrastructure, technology, policies and laws.</p>
+			</div>
+                </div>
+     </div>
+     <div class="page5">
+        <div class="article">
+                <div class="list">
+            <img src="images/pic_01.jpg" alt="pic1" id="listPic">
+            <div class="desc">
+                <h3>Learn How to Improve Your Personal Business</h3>
+                <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds.</p>
+          </div>
+        </div>
+        <div class="list">
+            <div class="desc">
+                <h3>Choose Between Two Beautifully Designed Color Schemes.</h3>
+                <p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p>
+            </div>
+            <img src="images/pic_02.jpg" alt="pic2">
+     </div>
+     </div>
+     </div>
+    <div class="page6">
+        		<h2>Our Awesome Crew</h2>
+			<p>Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills.</p>
+			<div class="list" style="margin-bottom: 70px">
+				<div class="person">
+					<img src="images/pr_04.jpg">
+					
+				</div>
+				<div class="person">
+					<img src="images/pr_06.jpg">
+					
+				</div>
+				<div class="person">
+					<img src="images/pr_10.jpg">
+				
+					
+				</div>
+				<div class="person">
+					<img src="images/pr_11.jpg">
+					
+						
+				</div>
+     </div>
+    </div>
+     <div class="page7">
+         <div class="left7">
+                <p>FELL FREE TO WRITE US</p>
+                <input type="text" placeholder="E-mail">
+				<input type="text" placeholder="Subject">
+				<textarea name="message" placeholder="Message" rows="5"></textarea>
+				<button type="button">SEND</button>
+         </div>
+         <div class="right7">
+                <h3>Contacts</h3>
+				<p>Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.</p>
+				<ul id="method">
+					<li>
+						<i class="iconfont"></i>
+						<p>360 King Street</p>
+						<p>Feastrvale Trevose, PA 19057
+						  </p>
+					</li>
+					<li>
+						<i class="iconfont"></i>
+						<p>(755) 564-84-12</p>
+					</li>
+					<li>
+						<i class="iconfont"></i>
+						<p style="padding-top: 5px">youname@mail.com</p>
+					</li>
+				</ul>
+         </div>
+
+     </div>
+     <footer class="list">
+            <div class="list-1 ft-list">
+                <p class="ft-title">LEARN MORE</p>
+                <div class="link">
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>How it works?</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Meeting tools</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Live streaming</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Contact method</p>
+                    </a>
+                </div>
+            </div>
+            <div class="ft-list">
+                <p class="ft-title">ABOUT US</p>
+                <div class="link">
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>About us</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Features</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Privacy police</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Terms&amp;Conditions</p>
+                    </a>
+                </div>
+            </div>
+            <div class="ft-list">
+                <p class="ft-title">SUPPORT</p>
+                <div class="link">
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>FAQ</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Contact us</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Live chat</p>
+                    </a>
+                    <a href="https://shillyli.github.io/FCC-Item/Beautiful-Page/index.html#">
+                        <p>Phone call</p>
+                    </a>
+                </div>
+            </div>
+            <div class="list-4 ft-list">
+                <p class="ft-title">ENJOY YOUR LIFE</p>
+                <div class="link">
+                    <p>Creat web UI kit for designers.<br>
+                    freelancers or business.</p>
+                    <div class="icon">
+                        <i class="iconfont"></i>
+                        <i class="iconfont"></i>
+                        <i class="iconfont"></i>
+                        <i class="iconfont"></i>
+                        <i class="iconfont"></i>
+                        <i class="iconfont"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+   
+
+            
+           
+
+</body>
+</html>
