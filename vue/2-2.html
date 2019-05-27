@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+        
+    <div id='app'>
+        <!-- v_model双向绑定数据 一边变 另一边也变化 -->
+        <input v-model="inputVal" type="text" />
+         <!-- v_on 绑定事件 简写@-->
+        <button @click="handler">提交</button>
+        <ul>
+            <!-- v_for 循环数据的数组输出到li-->
+            <todo-item v-bind:content='item'
+            v-bind:index="index"
+            v-for="(item,index) in list"
+            @delete="handD">
+        </todo-item>
+        </ul>
+    </div>
+    <script>
+      //创建vue全局组建
+        // Vue.component("TodoItem",{
+        //     props:['content'],
+        //     template:"<li>{{content}}</li>",
+            
+          
+        // })
+        var TodoItem ={
+            props:['content','index'],
+            template:"<li @click='handk'>{{content}}</li>",
+            methods: {
+                handk:function() {
+                    this.$emit("delete",this.index)
+                }
+            },
+        }
+        //实例化vue
+        var app =new Vue({
+              //el：接管id所在区域内容
+            el:'#app',
+            components: {
+                TodoItem:TodoItem
+            },
+            //插值表达式调用data
+            data:{
+                list:['第一课的内容','第二课的内容','ssss'],
+                inputVal:''
+            },
+            methods:{
+                handler:function(){
+                    
+                   this.list.push(this.inputVal);
+                   this.inputVal=""; 
+
+                },
+                handD:function(index){
+
+                  this.list.splice(index,1)
+
+                }
+            },
+            
+        })
+     
+     
+    
+    
+    
+    
+    </script>
+</body>
+</html>
