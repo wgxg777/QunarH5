@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="app">{{fullName}}</div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                firstName:"Big",
+                lastName:"Brother",
+                
+            },
+            //计算属性 内置缓存 当属性需要的值不变化 页面不会重新渲染
+            computed: {
+                fullName: {
+                    get:function(){
+                        return this.firstName+" " + this.lastName 
+                    },
+                    set:function(value){
+                        var arr = value.split(" ");
+                        this.firstName =arr[0];
+                        this.lastName = arr[1];
+
+                    }
+
+                   
+                }
+            }, 
+           //watch监听器 具备缓存机制
+            // watch: {
+            //     firstName() {
+            //        this.fullName= this.firstName+" " + this.lastName 
+            //     },
+            //     lastName() {
+            //         this.fullName=this.firstName+" " + this.lastName 
+            //     }
+            //     }
+            
+
+
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 不使用index作为key值 -->
+    <div id="app">
+        <!-- template不被渲染 -->
+        <template v-for="(item,index) in list" 
+        :key="item.id">
+          <div>{{ item.text }}----{{index}}</div>  
+          <span>{{ item.text }}</span>
+        </template>
+    </div>
+    <script>
+        //push 添加 pop 删除最后一个 shift 删除第一项 
+        // unshift 第一项添加 splice 截取数组删除添加 sort 排序
+        // reverse 倒转
+        var vm =new Vue({
+            el:"#app",
+            data:{
+                list:[
+                    {id:02124545,
+                    text:"hello"},
+                    {id:02145645,
+                    text:"wang"},
+                    {id:0101202,
+                    text:"xing"}
+                  
+                ]
+            }
+        })
+        // Vue.set()可以添加动态数据
+    
+    
+    
+    </script>
+</body>
+</html>
