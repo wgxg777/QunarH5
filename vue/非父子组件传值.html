@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <child content="wang"></child>
+        <child content="xing"></child>
+    </div>
+    
+    <script>
+        Vue.prototype.bus = new Vue()
+
+        Vue.component('child',{
+            props:['content'],
+            data:function(){
+                return{comContent:this.content}
+            },
+            template:'<div @click="ccc">{{comContent}}</div>',
+            methods:{
+                ccc:function(){
+                    this.bus.$emit('change',this.comContent)
+                }
+            },
+            mounted:function(){
+                var this_ =this
+                this.bus.$on("change",function(val){
+                    this_.comContent = val;
+                })
+            }
+
+        })
+
+
+
+        var vm = new Vue({
+            el:"#root"
+        })
+    </script>
+</body>
+</html>

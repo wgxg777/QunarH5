@@ -12,9 +12,9 @@
     <div id="app">
         <!-- template不被渲染 -->
         <template v-for="(item,index) in list" 
-        :key="item.id">
-          <div>{{ item.text }}----{{index}}</div>  
-          <span>{{ item.text }}</span>
+        >
+          <div :key="item.id">{{ item.text }}----{{index}}</div>  
+          <span>{{ item.id }}</span>
         </template>
     </div>
     <script>
@@ -25,11 +25,11 @@
             el:"#app",
             data:{
                 list:[
-                    {id:02124545,
+                    {id:1234,
                     text:"hello"},
-                    {id:02145645,
+                    {id:2342,
                     text:"wang"},
-                    {id:0101202,
+                    {id:4521,
                     text:"xing"}
                   
                 ]

@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.当使用子组件 在table tbody ，ul ， ol 下 使用 is="子组件" 
+    排除组件在大标签之外的bug -->
+    <!-- 2.子组件data要用function(){ 
+        return{
+
+        }
+     } -->
+     <!-- 3.ref在标签上写 ref="名字" 
+      在组件里写 this.$refs.名字 获取DOM节点  
+      写在组件上 获取的是组件的引用
+    -->
+    <div id="root">
+            <counter ref="one" :count="1" @change="handleChange"></counter>
+            <counter ref="two"  :count="3"  @change="handleChange"></counter>
+            <div>{{total}}</div>
+    </div>
+    <script>
+        Vue.component('counter',{
+            props:['count'],
+            template:'<div @click="handleClick"> {{number}}</div>',
+            data:function(){
+                return{
+                    number:this.count
+                }
+            },
+            methods: {
+                handleClick() {
+                    this.number++
+                    this.$emit("change",1)
+                }
+            },
+        })
+
+
+
+        var vam= new Vue({
+            el:"#root",
+            data:{
+                total:4
+            },
+            methods:{
+                handleChange:function(n){
+                  this.total +=n
+                }
+            }
+        })
+    </script>
+</body>
+</html>
