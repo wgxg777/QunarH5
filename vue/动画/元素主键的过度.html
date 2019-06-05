@@ -5,26 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
+    
     <script src='../vue.js'></script>
+    <script src='../velocity.min.js'></script>
 
     <title>Document</title>
     <style>
-        #root {
-            width: 300px;
-            height: 300px;
-            margin: 100px auto;
-          
-        }
-        .fade-enter,
-        .fade-leave-to{
+        .v-enter, .v-leave-to{
             opacity: 0;
-
         }
-
-        .fade-enter-active,
-        .fade-leave-active{
-            transition: opacity 3s
+        .v-enter-active, .v-leave-active{
+            transition: opacity 1s;
         }
     </style>
 </head>
@@ -33,17 +24,10 @@
         <!-- :duration={enter:10000,leave:1000} -->
     <!-- :duration:"10000" 自定义时常-->
     <div id="root">
-        <transition 
-        type="transition"
-        
-        
-        name="fade"
-        appear
-        enter-active-class="animated swing fade-enter-active " 
-        leave-active-class="animated swing fade-leave-active"
-        appear-active-class ="animated swing" 
-        >
-            <div v-if="show">hello world</div>
+        <transition  
+        mode="out-in"  >
+        <component :is="type"></component>
+            
         </transition>
         <button @click="handleClick">切换</button>
 
@@ -52,15 +36,28 @@
 
     </div>
     <script>
+
+        Vue.component('child',{
+            template:'<div>child</div>'
+        })
+        Vue.component('child-one',{
+            template:'<div>one</div>'
+        })
+
+
+
         var vm = new Vue({
             el: '#root',
             data: {
-                show: true
+                type:'child'
             },
             methods: {
                 handleClick() {
-                    this.show = !this.show
-                }
+                    this.type = this.type ==="child"?
+                    'child-one':'child'
+                  
+                },
+               
             },
 
         })

@@ -5,27 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
+    
     <script src='../vue.js'></script>
+    <script src='../velocity.min.js'></script>
 
     <title>Document</title>
     <style>
-        #root {
-            width: 300px;
-            height: 300px;
-            margin: 100px auto;
-          
-        }
-        .fade-enter,
-        .fade-leave-to{
-            opacity: 0;
-
-        }
-
-        .fade-enter-active,
-        .fade-leave-active{
-            transition: opacity 3s
-        }
+        
     </style>
 </head>
 
@@ -33,15 +19,10 @@
         <!-- :duration={enter:10000,leave:1000} -->
     <!-- :duration:"10000" 自定义时常-->
     <div id="root">
-        <transition 
-        type="transition"
-        
-        
-        name="fade"
-        appear
-        enter-active-class="animated swing fade-enter-active " 
-        leave-active-class="animated swing fade-leave-active"
-        appear-active-class ="animated swing" 
+        <transition name="fade" 
+        @befoer-enter="ben"
+        @enter="enter1"
+        @after-enter="afn"
         >
             <div v-if="show">hello world</div>
         </transition>
@@ -60,6 +41,20 @@
             methods: {
                 handleClick() {
                     this.show = !this.show
+                },
+                ben:function(el){
+                    el.style.opacity=0;
+                },
+                enter1:function(el,done){
+                    Velocity(el,{
+                        opacity:1
+                    },{
+                        duration:1000,
+                        complete:done
+                    })
+                },
+                afn:function(el){
+                      console.log("动画结束")
                 }
             },
 
