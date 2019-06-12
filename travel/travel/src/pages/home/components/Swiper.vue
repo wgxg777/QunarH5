@@ -18,7 +18,9 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 5000
+
       },
       swiperList: [{
         id: '0001',
@@ -33,6 +35,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
   .wrapper >>> .swiper-pagination-bullet-active
     background #fff !important
   .wrapper
