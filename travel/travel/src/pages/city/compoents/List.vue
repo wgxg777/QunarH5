@@ -34,7 +34,6 @@
             class="item border-bottom"
             v-for="innerItem of item"
             :key="innerItem.id"
-            @click="handleCityClick(innerItem.name)"
           >
             {{innerItem.name}}
           </div>
@@ -53,7 +52,16 @@ export default {
   },
   props: {
     cities: Object,
-    hot: Array
+    hot: Array,
+    letter: String
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 
 }
